@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buscar_estudiante"
+    android:background="#EADCFA">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="414dp"
+        android:layout_height="98dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        app:cardBackgroundColor="#7846CC"
+        >
+        <View
+            android:layout_width="441dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-12dp"
+            android:layout_marginStart="-16dp"
+            android:background="@drawable/Edubanner" />
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/nombre_estudiante"
+        android:layout_width="339dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/buscar"
+        android:drawableStart="@drawable/search"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/roboto_mono"
+        android:hint="@string/buscar"
+        android:paddingStart="10dp"
+        android:textColorHint="@color/white"
+        tools:ignore="RtlSymmetry" />
+
+
+
+</RelativeLayout>

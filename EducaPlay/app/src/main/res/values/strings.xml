@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">EducaPlay</string>
+    <string name="c_mo_deseas">¿Cómo deseas iniciar?</string>
+    <string name="Estudiante">Estudiante</string>
+    <string name="Docente">Docente</string>
+    <string name="entrar_en_m">Entrar en mi cuenta</string>
+    <string name="Introduce_tu_usuario">Introduce tu correo electrónico</string>
+    <string name="Introduce_tu_contraseña">Introduce tu contraseña</string>
+    <string name="Iniciar_sesión">Iniciar Sesión</string>
+    <string name="registrate">¿No tienes una cuenta? Regístrate</string>
+    <string name="registratusdatos">¡Registra tus datos!</string>
+    <string name="introducetunombre">Introduce tu nombre</string>
+    <string name="introducetuapellido">Introduce tu apellido</string>
+    <string name="introducetucorreo">Introduce tu correo electrónico</string>
+    <string name="introducetudocumento">Introduce tu documento de identidad</string>
+    <string name="Introducecontraseña">Introduce una contraseña</string>
+    <string name="registrarse">Regístrate</string>
+    <string name="buscar">Buscar...</string>
+    <string name="puntaje">Puntaje obtenido en cada prueba</string>
+    <string name="prueba1">PRUEBA # 1</string>
+    <string name="prueba2">PRUEBA # 2</string>
+    <string name="prueba3">PRUEBA # 3</string>
+    <string name="prueba4">PRUEBA # 4</string>
+    <string name="prueba5">PRUEBA # 5</string>
+    <string name="prueba6">PRUEBA # 6</string>
 </resources>
