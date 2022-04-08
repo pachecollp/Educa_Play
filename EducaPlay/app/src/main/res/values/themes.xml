@@ -16,4 +16,11 @@
             15sp
         </item>
     </style>
+    
+    <style name="BottomNavigation">
+
+        <item name="android:background">@color/barra</item>
+        <item name="itemIconTint">@color/white</item>
+    </style>
+
 </resources>

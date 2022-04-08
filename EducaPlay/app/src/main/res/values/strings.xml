@@ -23,4 +23,11 @@
     <string name="prueba4">PRUEBA # 4</string>
     <string name="prueba5">PRUEBA # 5</string>
     <string name="prueba6">PRUEBA # 6</string>
+    <string name="educaplay">Educa Play</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="segundo">Segundo</string>
+    <string name="primero">Primero</string>
+    <string name="tercero">Tercero</string>
+    <string name="cuarto">Cuarto</string>
 </resources>

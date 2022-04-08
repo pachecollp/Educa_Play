@@ -13,53 +13,59 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="-4dp"
-        android:layout_marginTop="203dp"
+        android:layout_marginTop="170dp"
         android:background="@drawable/img_1" />
 
-    <View
-        android:id="@+id/educa_play_"
-        android:layout_width="600dp"
-        android:layout_height="463dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="-2dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="26dp"
-        android:background="@drawable/imgprueba1"
-        />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/luckiestguy"
+        android:gravity="top"
+        android:text="@string/educaplay"
+        android:textSize="58dp"
+        android:textColor="@color/white"
+        android:textAppearance="@style/c_mo_deseas" />
 
     <TextView
         android:id="@+id/c_mo_deseas"
         android:layout_width="wrap_content"
-        android:layout_height="16dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="615dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="580dp"
         android:fontFamily="@font/roboto_mono"
         android:gravity="center_horizontal"
         android:text="@string/c_mo_deseas"
         android:textAppearance="@style/c_mo_deseas"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="18dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="113dp"
         android:layout_height="56dp"
+        android:layout_below="@+id/c_mo_deseas"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="654dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/boton"
         android:elevation="4dp"
         android:fontFamily="@font/roboto_mono"
+
+        android:onClick="estudiante"
         android:text="@string/Estudiante"
         android:textAllCaps="false"
-
         android:textColor="@color/black" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="91dp"
         android:layout_height="56dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="162dp"
-        android:layout_marginTop="718dp"
+        android:layout_marginTop="690dp"
         android:background="@drawable/boton"
         android:elevation="4dp"
         android:fontFamily="@font/roboto_mono"

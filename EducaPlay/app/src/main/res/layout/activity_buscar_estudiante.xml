@@ -14,18 +14,25 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
-        app:cardBackgroundColor="#7846CC"
-        >
-        <View
-            android:layout_width="441dp"
-            android:layout_height="120dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="-12dp"
-            android:layout_marginStart="-16dp"
-            android:background="@drawable/Edubanner" />
+        app:cardBackgroundColor="#7846CC">
+
+        <TextView
+            android:id="@+id/puntaje_obt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/luckiestguy"
+            android:gravity="top"
+            android:text="@string/educaplay"
+            android:textAppearance="@style/c_mo_deseas"
+            android:textColor="@color/white"
+            android:textSize="58dp" />
 
     </androidx.cardview.widget.CardView>
+
+
+
 
     <EditText
         android:id="@+id/nombre_estudiante"
@@ -43,6 +50,12 @@
         android:paddingStart="10dp"
         android:textColorHint="@color/white"
         tools:ignore="RtlSymmetry" />
+
+
+
+
+
+
 
 
 

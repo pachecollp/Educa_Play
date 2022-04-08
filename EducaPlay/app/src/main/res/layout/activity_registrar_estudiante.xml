@@ -140,6 +140,7 @@
         android:elevation="4dp"
         android:fontFamily="@font/roboto_mono"
         android:text="@string/registrarse"
+        android:onClick="registrarse"
         android:textAllCaps="false"
         android:textColor="@color/white"
 
