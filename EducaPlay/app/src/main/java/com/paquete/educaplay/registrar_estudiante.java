@@ -38,11 +38,11 @@ public class registrar_estudiante extends AppCompatActivity {
         btnregistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //agregarusuario();
-                Intent intent = new Intent(registrar_estudiante.this, Iniciar_estudiante.class);
+                agregarusuario();
+                //Intent intent = new Intent(registrar_estudiante.this, Iniciar_estudiante.class);
                 //intent.putExtra("usu",pasarusu);
-                startActivity(intent);
-                finish();
+                //startActivity(intent);
+                //finish();
             }
         });
         img.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +58,7 @@ public class registrar_estudiante extends AppCompatActivity {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
             Class.forName("net.sourceforge.jtds.jdbc.Driver").newInstance();
-            conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://gutgara.ddns.net;databaseName=EducaPlay;user=gutgara;password=VAuX2v_1xx0_T9w");
+            conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://gutgara.ddns.net;databaseName=EducaPlay;user=gutgara;password=VAuX2v_1xx0_T9w;");
 
         }catch (Exception e){
             Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
@@ -68,12 +68,12 @@ public class registrar_estudiante extends AppCompatActivity {
     }
     public void agregarusuario(){
         try{
-            PreparedStatement pst = conexionBD().prepareStatement("insert into estudiante values(?,?,?,?,?)");
+            PreparedStatement pst = conexionBD().prepareStatement("insert into Usuarios values(?,?,?,?,?)");
             pst.setString(1,nom.getText().toString());
             pst.setString(2,ape.getText().toString());
             pst.setString(3,correo.getText().toString());
             pst.setString(4,cod.getText().toString());
-            pst.setString(6,contra.getText().toString());
+            pst.setString(5,contra.getText().toString());
             pst.executeUpdate();
             Toast.makeText(getApplicationContext(),"REGISTRO AGREGADO CORRECTAMENTE",Toast.LENGTH_SHORT).show();
         }catch (SQLDataException e){
