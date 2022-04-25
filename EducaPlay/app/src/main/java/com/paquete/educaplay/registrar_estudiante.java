@@ -18,7 +18,7 @@ import java.sql.SQLDataException;
 import java.sql.SQLException;
 
 public class registrar_estudiante extends AppCompatActivity {
-    EditText nom, ape, correo, cod, contr;
+    EditText nom, ape, correo, cod, contra;
     Button btnregistrarse;
     String pasarusu;
     View img;
@@ -31,7 +31,7 @@ public class registrar_estudiante extends AppCompatActivity {
         ape = (EditText) findViewById(R.id.apellido_estudiante);
         correo = (EditText) findViewById(R.id.correo_estudiante);
         cod = (EditText) findViewById(R.id.codigo_estudiante);
-        contr = (EditText) findViewById(R.id.contraseña_estudiante);
+        contra = (EditText) findViewById(R.id.contraseña_estudiante);
         btnregistrarse = (Button) findViewById(R.id.btnregistro);
         img = (View)findViewById(R.id.img);
         pasarusu = correo.getText().toString().trim();
@@ -73,7 +73,7 @@ public class registrar_estudiante extends AppCompatActivity {
             pst.setString(2,ape.getText().toString());
             pst.setString(3,correo.getText().toString());
             pst.setString(4,cod.getText().toString());
-            pst.setString(6,contr.getText().toString());
+            pst.setString(6,contra.getText().toString());
             pst.executeUpdate();
             Toast.makeText(getApplicationContext(),"REGISTRO AGREGADO CORRECTAMENTE",Toast.LENGTH_SHORT).show();
         }catch (SQLDataException e){

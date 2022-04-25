@@ -2,12 +2,21 @@ package com.paquete.educaplay;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class Iniciar_estudiante extends AppCompatActivity {
     EditText usuario, contraseña;
@@ -49,16 +58,16 @@ public class Iniciar_estudiante extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... strings){
-            con = conexionBD(ConnectionClass.nom.toString(),ConnectionClass.ape.toString(),ConnectionClass.corr.toString(),ConnectionClass.cod.toString(),ConnectionClass.contra.toString());
+            Connection con = connexionBD(ConnectionClass.nom.toString(), ConnectionClass.ape.toString(), ConnectionClass.correo.toString(), ConnectionClass.cod.toString(), ConnectionClass.contra.toString());
             if(con == null){
-                Toast.makeText(iniciar_estudiante.this, "Revisa tu conexion", Toast.LENGTH_LONG).show();
+                Toast.makeText(Iniciar_estudiante.this, "Revisa tu conexion", Toast.LENGTH_LONG).show();
             }
             else {
                 try {
 
                     String sql = "SELECT * FROM estudiante WHERE usuario_estudiate = '" + usuario.getText() + "' AND contraseña_estudiante = '" + contraseña.getText() + "' ";
-                    nombreusuario = usuario.getText().toString();
-                    nom = ""+nombreusuario;
+                    String nombreusuario = usuario.getText().toString();
+                    String nom = "" + nombreusuario;
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery(sql);
 
@@ -97,7 +106,7 @@ public class Iniciar_estudiante extends AppCompatActivity {
     }
 
     @SuppressLint("NewApi")
-    public Connection conexionBD(String nom, String ape, String corr, String cod, String cotra){
+    public Connection connexionBD(String nom, String ape, String corr, String cod, String cotra){
         Connection conexion = null;
         try {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
