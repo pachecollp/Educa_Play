@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EADCFA"
+    tools:context=".pruebas_estudiante">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="414dp"
+        android:layout_height="98dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        app:cardBackgroundColor="#7846CC"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/luckiestguy"
+            android:gravity="top"
+            android:text="@string/educaplay"
+            android:textSize="58dp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/c_mo_deseas" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/group_14"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/logprueba1"/>
+
+    <View
+        android:id="@+id/group_1"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="210dp"
+        android:background="@drawable/logprueba2"/>
+
+    <View
+        android:id="@+id/group1"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/logprueba3" />
+
+    <View
+        android:id="@+id/group_"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/logprueba4" />
+
+    <View
+        android:id="@+id/grup_1"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="550dp"
+        android:background="@drawable/logprueba5" />
+
+    <View
+        android:id="@+id/grop_1"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginStart="210dp"
+        android:background="@drawable/logprueba6"/>
+
+</RelativeLayout>

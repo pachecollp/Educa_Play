@@ -32,8 +32,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,8 +48,8 @@
                 android:fontFamily="@font/roboto_mono"
                 android:gravity="top"
                 android:text="@string/puntaje"
-                android:textSize="18dp"
-                android:textAppearance="@style/c_mo_deseas" />
+                android:textAppearance="@style/c_mo_deseas"
+                android:textSize="18dp" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="394dp"
@@ -77,8 +77,8 @@
                     android:layout_marginTop="11dp"
                     android:gravity="top"
                     android:text="@string/prueba1"
-                    android:textSize="20dp"
-                    android:textAppearance="@style/c_mo_deseas" />
+                    android:textAppearance="@style/c_mo_deseas"
+                    android:textSize="20dp" />
 
 
                 <TextView
@@ -127,8 +127,8 @@
                     android:layout_marginTop="11dp"
                     android:gravity="top"
                     android:text="@string/prueba2"
-                    android:textSize="20dp"
-                    android:textAppearance="@style/c_mo_deseas" />
+                    android:textAppearance="@style/c_mo_deseas"
+                    android:textSize="20dp" />
 
 
                 <TextView
@@ -175,8 +175,8 @@
                     android:layout_marginTop="11dp"
                     android:gravity="top"
                     android:text="@string/prueba3"
-                    android:textSize="20dp"
-                    android:textAppearance="@style/c_mo_deseas" />
+                    android:textAppearance="@style/c_mo_deseas"
+                    android:textSize="20dp" />
 
 
                 <TextView
