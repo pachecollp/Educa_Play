@@ -46,9 +46,6 @@ public class registrar_estudiante extends AppCompatActivity {
                 intent.putExtra("usu",pasarusu);
                 startActivity(intent);
                 finish();
-                intent.putExtra("usu",pasarusu);
-                startActivity(intent);
-                finish();
             }
         });
         img.setOnClickListener(new View.OnClickListener() {

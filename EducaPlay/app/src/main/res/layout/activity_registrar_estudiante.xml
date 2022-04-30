@@ -145,14 +145,5 @@
         android:textColor="@color/white"
 
         />
-    /*
-
-    <EditText
-        android:id="@+id/status"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:text="Registro"
-        android:textSize="25dp"/>
 
 </RelativeLayout>
