@@ -1,7 +1,5 @@
 package com.paquete.educaplay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -13,8 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -34,7 +35,7 @@ public class Iniciar_estudiante extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //enviar(nombreusuario);
-               // new Iniciar_estudiante.checkLogin().execute("");
+                new Iniciar_estudiante.checkLogin().execute("");
                 finish();
             }
         });
@@ -58,7 +59,7 @@ public class Iniciar_estudiante extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... strings){
-            Connection con = connexionBD(ConnectionClass.nom.toString(), ConnectionClass.ape.toString(), ConnectionClass.correo.toString(), ConnectionClass.cod.toString(), ConnectionClass.contra.toString());
+            Connection con = conexionBD();
             if(con == null){
                 Toast.makeText(Iniciar_estudiante.this, "Revisa tu conexion", Toast.LENGTH_LONG).show();
             }
@@ -105,14 +106,13 @@ public class Iniciar_estudiante extends AppCompatActivity {
         }
     }
 
-    @SuppressLint("NewApi")
-    public Connection connexionBD(String nom, String ape, String corr, String cod, String cotra){
+    public Connection conexionBD(){
         Connection conexion = null;
         try {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
             Class.forName("net.sourceforge.jtds.jdbc.Driver").newInstance();
-            conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://gutgara.ddns.net;databaseName=EducaPlay;user=gutgara;password=VAuX2v_1xx0_T9w");
+            conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://gutgara.ddns.net;databaseName=EducaPlay;user=gutgara;password=VAuX2v_1xx0_T9w;");
 
         }catch (Exception e){
             Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();

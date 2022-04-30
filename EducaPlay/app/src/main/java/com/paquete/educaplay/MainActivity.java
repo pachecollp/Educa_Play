@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void estudiante(View view){
-        Intent regis = new Intent(this, registrar_estudiante.class);
+        Intent regis = new Intent(this, Iniciar_estudiante.class);
         startActivity(regis);
     }
 
