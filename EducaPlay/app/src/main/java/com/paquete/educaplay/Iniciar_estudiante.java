@@ -65,7 +65,7 @@ public class Iniciar_estudiante extends AppCompatActivity {
             else {
                 try {
 
-                    String sql = "SELECT * FROM estudiante WHERE usuario_estudiate = '" + usuario.getText() + "' AND contraseña_estudiante = '" + contraseña.getText() + "' ";
+                    String sql = "SELECT * FROM Usuarios WHERE usuario_estudiate = '" + usuario.getText() + "' AND contraseña_estudiante = '" + contraseña.getText() + "' ";
                     String nombreusuario = usuario.getText().toString();
                     String nom = "" + nombreusuario;
                     Statement stmt = con.createStatement();

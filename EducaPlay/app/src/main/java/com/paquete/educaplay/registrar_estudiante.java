@@ -39,10 +39,10 @@ public class registrar_estudiante extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 agregarusuario();
-                //Intent intent = new Intent(registrar_estudiante.this, Iniciar_estudiante.class);
-                //intent.putExtra("usu",pasarusu);
-                //startActivity(intent);
-                //finish();
+                Intent intent = new Intent(registrar_estudiante.this, Iniciar_estudiante.class);
+                intent.putExtra("usu",pasarusu);
+                startActivity(intent);
+                finish();
             }
         });
         img.setOnClickListener(new View.OnClickListener() {
