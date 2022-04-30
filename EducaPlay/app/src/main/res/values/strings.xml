@@ -1,4 +1,8 @@
 <resources>
+    <string name="registro_1">Resgistra tus datos de administrador</string>
+    <string name="admininiciar3">Entrar en mi  cuenta de administrador</string>
+    <string name="admin_iniciar2">Introduce tu contraseña</string>
+    <string name="admin_iniciar">Introduce tu correo electronico</string>
     <string name="app_name">EducaPlay</string>
     <string name="c_mo_deseas">¿Cómo deseas iniciar?</string>
     <string name="Estudiante">Estudiante</string>

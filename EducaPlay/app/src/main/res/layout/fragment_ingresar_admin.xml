@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Iniciar_estudiante"
+    tools:context=".ingresar_admin"
     android:background="#531EA0">
-
-    <View
-        android:layout_width="41dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/atras"
-        />
 
     <View
         android:id="@+id/group"
@@ -24,21 +15,8 @@
         android:layout_marginTop="157dp"
         android:background="@drawable/bombillo" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="244dp"
-        android:fontFamily="@font/roboto_mono"
-        android:gravity="center_horizontal"
-        android:text="@string/entrar_en_m"
-        android:textAppearance="@style/c_mo_deseas"
-        android:textColor="@color/white" />
-
     <EditText
-        android:id="@+id/usuario_estudiante1"
+        android:id="@+id/admin_ingresar1"
         android:layout_width="339dp"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
@@ -49,27 +27,26 @@
         android:drawableStart="@drawable/logocorreo"
         android:drawablePadding="5dp"
         android:fontFamily="@font/roboto_mono"
-        android:hint="@string/Introduce_tu_usuario"
+        android:hint="@string/admin_iniciar"
         android:paddingStart="10dp"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry"
+        android:textSize="15dp"/>
 
     <EditText
-        android:id="@+id/contraseña_estudiante1"
+        android:id="@+id/admin_ingresar2"
         android:layout_width="339dp"
-        android:layout_height="41.09dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="402dp"
+        android:layout_marginTop="406dp"
         android:background="@drawable/edittext"
-        android:drawableStart="@drawable/logokey"
+        android:drawableStart="@drawable/logocorreo"
         android:drawablePadding="5dp"
         android:fontFamily="@font/roboto_mono"
-        android:hint="@string/Introduce_tu_contraseña"
-        android:inputType="textPassword"
+        android:hint="@string/admin_iniciar2"
         android:paddingStart="10dp"
         tools:ignore="RtlSymmetry" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btniniciarestudi"
         android:layout_width="339dp"
@@ -85,19 +62,17 @@
         android:text="@string/Iniciar_sesión"
         android:textAllCaps="false"
         android:textColor="@color/white" />
-
     <TextView
-        android:layout_width="280dp"
-        android:onClick="registrarse"
-        android:layout_height="36dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="67dp"
-        android:layout_marginBottom="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="244dp"
         android:fontFamily="@font/roboto_mono"
         android:gravity="center_horizontal"
-        android:text="@string/registrate"
-        android:textColor="@color/white"
-        tools:ignore="OnClick" />
+        android:text="@string/entrar_en_m"
+        android:textAppearance="@style/c_mo_deseas"
+        android:textColor="@color/white" />
 
-
-</RelativeLayout>
+</FrameLayout>
