@@ -22,6 +22,7 @@ import java.sql.Statement;
 public class Iniciar_estudiante extends AppCompatActivity {
     EditText usuario, contraseña;
     Button iniciar_sesion;
+    Connection con;
 
 
     @Override
@@ -59,7 +60,7 @@ public class Iniciar_estudiante extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... strings){
-            Connection con = conexionBD();
+            //con = connectionClass(ConnectionClass.un.toString(),ConnectionClass.pass.toString(),ConnectionClass.db.toString(),ConnectionClass.ip.toString());
             if(con == null){
                 Toast.makeText(Iniciar_estudiante.this, "Revisa tu conexion", Toast.LENGTH_LONG).show();
             }
@@ -106,7 +107,23 @@ public class Iniciar_estudiante extends AppCompatActivity {
         }
     }
 
-    public Connection conexionBD(){
+    @SuppressLint("NewApi")
+    public  Connection connectionClass(String user, String password,String database, String server){
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        Connection connection = null;
+        String connectionURL = null;
+        try {
+            Class.forName("net.sourceforge.jtds.jdbc.Driver");
+            connectionURL = "jdbc:jtds:sqlserver://" + server+"/" + database + ";user" + user + ";password=" + password + ";";
+            connection = DriverManager.getConnection(connectionURL);
+        }catch (Exception e){
+            Log.e("SQL Connection Error ; ", e.getMessage());
+        }
+        return connection;
+    }
+
+    /*public Connection conexionBD(){
         Connection conexion = null;
         try {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -119,7 +136,7 @@ public class Iniciar_estudiante extends AppCompatActivity {
 
         }
         return conexion;
-    }
+    }*/
     public void iniciobuscar(View view){
         Intent bus = new Intent(this, buscar_estudiante.class);
         startActivity(bus);
