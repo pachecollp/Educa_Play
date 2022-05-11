@@ -54,7 +54,6 @@
         android:background="@drawable/boton"
         android:elevation="4dp"
         android:fontFamily="@font/roboto_mono"
-
         android:onClick="estudiante"
         android:text="@string/Estudiante"
         android:textAllCaps="false"
@@ -69,9 +68,9 @@
         android:background="@drawable/boton"
         android:elevation="4dp"
         android:fontFamily="@font/roboto_mono"
+        android:onClick="docente"
         android:text="@string/Docente"
         android:textAllCaps="false"
-
         android:textColor="@color/black" />
 
 

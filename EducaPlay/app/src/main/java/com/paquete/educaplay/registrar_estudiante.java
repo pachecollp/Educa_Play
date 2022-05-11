@@ -2,16 +2,13 @@ package com.paquete.educaplay;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.Connection;
@@ -30,7 +27,7 @@ public class registrar_estudiante extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_estudiante);
-        nom = (EditText) findViewById(R.id.nombre_estudiante);
+        nom = (EditText) findViewById(R.id.nombre_docente);
         ape = (EditText) findViewById(R.id.apellido_estudiante);
         correo = (EditText) findViewById(R.id.correo_estudiante);
         cod = (EditText) findViewById(R.id.codigo_estudiante);

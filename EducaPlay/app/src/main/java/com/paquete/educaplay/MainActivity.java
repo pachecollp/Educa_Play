@@ -18,5 +18,10 @@ public class MainActivity extends AppCompatActivity {
         Intent regis = new Intent(this, Iniciar_estudiante.class);
         startActivity(regis);
     }
+    public void docente(View view){
+        Intent regis = new Intent(this, ingresar_admin.class);
+        startActivity(regis);
+    }
+
 
 }
