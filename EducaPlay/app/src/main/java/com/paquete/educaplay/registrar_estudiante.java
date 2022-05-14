@@ -65,7 +65,6 @@ public class registrar_estudiante extends AppCompatActivity {
 
         }catch (Exception e){
             Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
-
         }
         return conexion;
     }
