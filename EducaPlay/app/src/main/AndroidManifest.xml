@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".prueba1"
-            android:exported="false" />
-        <activity
             android:name=".pruebas_estudiante"
             android:exported="true" />
         <activity
