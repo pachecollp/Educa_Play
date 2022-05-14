@@ -16,15 +16,6 @@
             android:exported="false"
             android:label="@string/title_activity_main2" />
         <activity
-            android:name=".pruebas_estudiante"
-            android:exported="true" />
-        <activity
-            android:name=".calificaciones_estudiantes"
-            android:exported="true" />
-        <activity
-            android:name=".buscar_estudiante"
-            android:exported="true" />
-        <activity
             android:name=".registrar_estudiante"
             android:exported="true" />
         <activity

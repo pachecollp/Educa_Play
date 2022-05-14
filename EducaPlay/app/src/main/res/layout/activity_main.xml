@@ -14,20 +14,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="-4dp"
         android:layout_marginTop="170dp"
-        android:background="@drawable/img_1" />
+        android:background="@drawable/logoapp" />
 
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="120dp"
-        android:fontFamily="@font/luckiestguy"
-        android:gravity="top"
-        android:text="@string/educaplay"
-        android:textSize="58dp"
-        android:textColor="@color/white"
-        android:textAppearance="@style/c_mo_deseas" />
 
     <TextView
         android:id="@+id/c_mo_deseas"
