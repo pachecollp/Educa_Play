@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_homesolo"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_prueba"
+        android:icon="@drawable/ic_prueba"
+        android:title="@string/title_prueba" />
+
+    <item
+        android:id="@+id/navigation_calificaciones"
+        android:icon="@drawable/ic_nota"
+        android:title="@string/title_calificaciones" />
+
+    <item
+        android:id="@+id/navigation_modificaciones"
+        android:icon="@drawable/ic_perfil"
+        android:title="@string/title_modificaciones" />
+
+</menu>
