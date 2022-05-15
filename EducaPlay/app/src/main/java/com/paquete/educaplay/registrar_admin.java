@@ -1,41 +1,36 @@
 package com.paquete.educaplay;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link registrar_admin#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLDataException;
+import java.sql.SQLException;
+
 public class registrar_admin extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    EditText nom, ape, correo, cod, contra;
+    Button btnregistrarse;
+    String pasarusu, rol;
+    View img;
 
     public registrar_admin() {
-        // Required empty public constructor
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment registrar_admin.
-     */
     // TODO: Rename and change types and number of parameters
     public static registrar_admin newInstance(String param1, String param2) {
         registrar_admin fragment = new registrar_admin();
@@ -49,9 +44,65 @@ public class registrar_admin extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+        setContentView(R.layout.activity_registrar_estudiante);
+        nom = (EditText) nom.findViewById(R.id.nombre_docente);
+        ape = (EditText) ape.findViewById(R.id.apellido_docente);
+        correo = (EditText) correo.findViewById(R.id.correo_docente);
+        cod = (EditText) cod.findViewById(R.id.codigo_docente);
+        contra = (EditText) contra.findViewById(R.id.contraseña_docente);
+        btnregistrarse = (Button) btnregistrarse.findViewById(R.id.btnregistroadmin);
+        img = (View) img.findViewById(R.id.img);
+        pasarusu = correo.getText().toString().trim();
+        rol = "3";
+        btnregistrarse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                agregaradmin();
+                Intent intent = new Intent(registrar_admin.this, MainActivity2.class);
+                intent.putExtra("usu", pasarusu);
+                startActivity(intent);
+                finish();
+            }
+        });
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("nombre :", String.valueOf("2"));
+            }
+        });
+    }
+
+    private void setContentView(int activity_registrar_estudiante) {
+    }
+
+    public Connection conexionBD(){
+        Connection conexion = null;
+        try {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            Class.forName("net.sourceforge.jtds.jdbc.Driver").newInstance();
+            conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://gutgara.ddns.net;databaseName=EducaPlay;user=gutgara;password=VAuX2v_1xx0_T9w;");
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
+        }
+        return conexion;
+    }
+    public void agregaradmin(){
+        try{
+            PreparedStatement pst = conexionBD().prepareStatement("insert into Usuarios values(?,?,?,?,?,?)");
+            pst.setString(1,rol);
+            pst.setString(2,nom.getText().toString());
+            pst.setString(3,ape.getText().toString());
+            pst.setString(4,cod.getText().toString());
+            pst.setString(5,correo.getText().toString());
+            pst.setString(6,contra.getText().toString());
+            pst.executeUpdate();
+            Toast.makeText(getApplicationContext(),"REGISTRO AGREGADO CORRECTAMENTE",Toast.LENGTH_SHORT).show();
+        }catch (SQLDataException e){
+            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
     }
 
@@ -61,4 +112,5 @@ public class registrar_admin extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_registrar_admin, container, false);
     }
+
 }

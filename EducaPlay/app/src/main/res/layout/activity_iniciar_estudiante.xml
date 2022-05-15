@@ -9,14 +9,6 @@
     android:background="#531EA0">
 
     <View
-        android:layout_width="41dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/atras"
-        />
-
-    <View
         android:id="@+id/group"
         android:layout_width="50dp"
         android:layout_height="73.43dp"
@@ -29,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="129dp"
+        android:layout_marginStart="170dp"
         android:layout_marginTop="244dp"
         android:fontFamily="@font/roboto_mono"
         android:gravity="center_horizontal"
@@ -93,9 +85,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="67dp"
         android:layout_marginBottom="50dp"
+        android:clickable="true"
         android:fontFamily="@font/roboto_mono"
         android:gravity="center_horizontal"
-        android:clickable="true"
         android:onClick="nuevoregistro"
         android:text="@string/registrate"
         android:textColor="@color/white"

@@ -68,8 +68,8 @@ public class ingresar_admin extends AppCompatActivity {
         //Intent bus = new Intent(this, buscar_estudiante.class);
         //startActivity(bus);
     }
-    public void nuevoregistro(View view){
-        Intent in = new Intent(this,registrar_estudiante.class);
+    public void nuevoregistroadmin(View view){
+        Intent in = new Intent(this,registrar_admin.class);
         startActivity(in);
     }
 }

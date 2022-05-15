@@ -129,7 +129,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
 
-        android:id="@+id/btnregistro"
+        android:id="@+id/btnregistroadmin"
         android:layout_width="339dp"
         android:layout_height="36dp"
         android:layout_alignParentStart="true"
