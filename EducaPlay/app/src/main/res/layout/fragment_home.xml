@@ -31,8 +31,6 @@
     </androidx.cardview.widget.CardView>
 
 
-
-
     <EditText
         android:id="@+id/nombre_docente"
         android:layout_width="339dp"
