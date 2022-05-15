@@ -42,4 +42,5 @@
     <string name="title_calificaciones">Calificaciones</string>
     <string name="title_modificaciones">Modificaciones</string>
     <string name="title_activity_main3">MainActivity3</string>
+    <string name="rol">rol</string>
 </resources>

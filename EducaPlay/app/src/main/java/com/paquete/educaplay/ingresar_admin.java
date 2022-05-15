@@ -30,8 +30,8 @@ public class ingresar_admin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 login();
-                Intent intent = new Intent(ingresar_admin.this, buscar_estudiante.class);
-                startActivity(intent);
+                //Intent intent = new Intent(ingresar_admin.this, buscar_estudiante.class);
+                //startActivity(intent);
                 finish();
             }
         });
@@ -49,8 +49,8 @@ public class ingresar_admin extends AppCompatActivity {
                 String usua=fila.getString(0);
                 String pass=fila.getString(1);
                 if (usuario.equals(usua)&&contraseña.equals(pass)){
-                    Intent ven=new Intent(this, buscar_estudiante.class);
-                    startActivity(ven);
+                    //Intent ven=new Intent(this, buscar_estudiante.class);
+                    //startActivity(ven);
                 }
             }
             else {
@@ -65,8 +65,8 @@ public class ingresar_admin extends AppCompatActivity {
     }
 
     public void iniciobuscar(View view){
-        Intent bus = new Intent(this, buscar_estudiante.class);
-        startActivity(bus);
+        //Intent bus = new Intent(this, buscar_estudiante.class);
+        //startActivity(bus);
     }
     public void nuevoregistro(View view){
         Intent in = new Intent(this,registrar_estudiante.class);
