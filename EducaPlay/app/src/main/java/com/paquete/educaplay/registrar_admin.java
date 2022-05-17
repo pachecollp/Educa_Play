@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.nio.BufferUnderflowException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -27,24 +28,9 @@ public class registrar_admin extends Fragment {
     String pasarusu, rol;
     View img;
 
-    public registrar_admin() {
-
-    }
-
-    // TODO: Rename and change types and number of parameters
-    public static registrar_admin newInstance(String param1, String param2) {
-        registrar_admin fragment = new registrar_admin();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrar_estudiante);
         nom = (EditText) nom.findViewById(R.id.nombre_docente);
         ape = (EditText) ape.findViewById(R.id.apellido_docente);
         correo = (EditText) correo.findViewById(R.id.correo_docente);
@@ -58,10 +44,9 @@ public class registrar_admin extends Fragment {
             @Override
             public void onClick(View view) {
                 agregaradmin();
-                Intent intent = new Intent(registrar_admin.this, MainActivity2.class);
-                intent.putExtra("usu", pasarusu);
-                startActivity(intent);
-                finish();
+                //Intent intent = new Intent(MainActivity2.class);
+                //intent.putExtra("usu", pasarusu);
+                //startActivity(intent);
             }
         });
         img.setOnClickListener(new View.OnClickListener() {
@@ -71,10 +56,21 @@ public class registrar_admin extends Fragment {
             }
         });
     }
-
-    private void setContentView(int activity_registrar_estudiante) {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_registrar_admin, container, false);
+        return rootView;
+    }
+    @Override
+    public void onAttach(MainActivity2 activity) {
+        super.onAttach(activity);
     }
 
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
     public Connection conexionBD(){
         Connection conexion = null;
         try {
@@ -84,7 +80,7 @@ public class registrar_admin extends Fragment {
             conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://gutgara.ddns.net;databaseName=EducaPlay;user=gutgara;password=VAuX2v_1xx0_T9w;");
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
         }
         return conexion;
     }
@@ -98,19 +94,16 @@ public class registrar_admin extends Fragment {
             pst.setString(5,correo.getText().toString());
             pst.setString(6,contra.getText().toString());
             pst.executeUpdate();
-            Toast.makeText(getApplicationContext(),"REGISTRO AGREGADO CORRECTAMENTE",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"REGISTRO AGREGADO CORRECTAMENTE",Toast.LENGTH_SHORT).show();
         }catch (SQLDataException e){
-            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registrar_admin, container, false);
+    public void registrarse(View view){
+        //Intent inic = new Intent(this,Iniciar_estudiante.class);
+       // startActivity(inic);
     }
 
 }

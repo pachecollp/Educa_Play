@@ -21,9 +21,9 @@ import java.sql.SQLException;
 import javax.crypto.EncryptedPrivateKeyInfo;
 
 public class registrar_estudiante extends AppCompatActivity {
-    EditText nom, ape, correo, cod, contra, rol;
+    EditText nom, ape, correo, cod, contra;
     Button btnregistrarse;
-    String pasarusu;
+    String pasarusu, rol;
     View img;
 
     @Override
@@ -38,7 +38,7 @@ public class registrar_estudiante extends AppCompatActivity {
         btnregistrarse = (Button) findViewById(R.id.btnregistro);
         img = (View)findViewById(R.id.img);
         pasarusu = correo.getText().toString().trim();
-        rol = (EditText) findViewById(R.id.rol);
+        rol = "2";
         btnregistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +72,7 @@ public class registrar_estudiante extends AppCompatActivity {
     public void agregarusuario(){
         try{
             PreparedStatement pst = conexionBD().prepareStatement("insert into Usuarios values(?,?,?,?,?,?)");
-            pst.setString(1,rol.getText().toString());
+            pst.setString(1,rol);
             pst.setString(2,nom.getText().toString());
             pst.setString(3,ape.getText().toString());
             pst.setString(4,cod.getText().toString());
@@ -86,8 +86,6 @@ public class registrar_estudiante extends AppCompatActivity {
             throwables.printStackTrace();
         }
     }
-
-
 
     public void registrarse(View view){
         Intent inic = new Intent(this,Iniciar_estudiante.class);
