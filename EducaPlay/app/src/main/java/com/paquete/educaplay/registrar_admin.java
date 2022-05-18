@@ -62,10 +62,6 @@ public class registrar_admin extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_registrar_admin, container, false);
         return rootView;
     }
-    @Override
-    public void onAttach(MainActivity2 activity) {
-        super.onAttach(activity);
-    }
 
     @Override
     public void onDetach() {
